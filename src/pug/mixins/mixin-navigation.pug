@@ -1,0 +1,6 @@
+mixin navigation(data)
+	nav.navigation&attributes(attributes)
+		ul.navigation__list
+			each link in data.navigation
+				li.navigation__item
+					a.navigation__link(href=link.href)!= link.text

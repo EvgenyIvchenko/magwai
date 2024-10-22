@@ -3,13 +3,13 @@
 	flex-direction: column;
 	overflow-anchor: none;
 	margin: 0;
-	min-width: 375px;
+	min-width: 360px;
 	min-height: 100dvh;
 	font-family: var(--font-family);
 	font-weight: 400;
-	font-size: 13px;
+	font-feature-settings: "pnum" on, "lnum" on;
+	font-size: 14px;
 	color: var(--color-text-main);
 	background-color: var(--color-bg-main);
-	font-feature-settings: "pnum" on, "lnum" on;
 	overscroll-behavior: none;
 }

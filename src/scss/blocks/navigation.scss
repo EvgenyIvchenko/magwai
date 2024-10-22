@@ -1,0 +1,85 @@
+.navigation {
+	position: absolute;
+	top: 71px;
+	left: 0;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	margin-bottom: auto;
+	width: 100%;
+	height: calc(100dvh - 71px);
+	background-color: var(--color-bg-main);
+	opacity: 0;
+	transition: opacity .3s ease-in-out;
+	pointer-events: none;
+
+	&--opened {
+		opacity: 1;
+		pointer-events: visible;
+	}
+
+	@include tablet {
+		top: 110px;
+		margin-bottom: 0;
+		height: calc(100dvh - 110px);
+	}
+
+	@include desktop {
+		position: static;
+		flex-direction: row;
+		height: auto;
+		opacity: 1;
+		pointer-events: visible;
+	}
+}
+
+.navigation__list {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 15px;
+
+	@include desktop {
+		flex-direction: row;
+		width: auto;
+		gap: 22px;
+	}
+}
+
+.navigation__item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+
+	@include desktop {
+		width: auto;
+	}
+}
+
+.navigation__link {
+	width: 100%;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 150%;
+	text-align: left;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 1px var(--color-stroke);
+	padding-inline: 18px;
+
+	@include tablet {
+		font-size: 36px;
+		padding-inline: 40px;
+	}
+
+	@include desktop {
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 150%;
+		-webkit-text-fill-color: initial;
+		-webkit-text-stroke: none;
+		color: var(--color-text-main);
+		padding-block: 5px;
+		padding-inline: 10px;
+	}
+}

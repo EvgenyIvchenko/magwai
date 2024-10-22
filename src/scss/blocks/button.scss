@@ -1,1 +1,16 @@
-.button {}
+.button {
+	display: flex;
+	justify-content: center;
+	border: none;
+	color: var(--color-text-main);
+	background-color: transparent;
+
+	&--main {
+		position: relative;
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 150%;
+		text-align: center;
+		background-color: var(--color-button-main);
+	}
+}

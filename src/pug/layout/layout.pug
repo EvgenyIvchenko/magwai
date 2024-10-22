@@ -15,7 +15,6 @@ html(class="page" lang="ru")
 		block meta
 		block head
 			link(rel="preload" href="fonts/montserrat-400.woff2" as="font" crossorigin="anonymous")
-			link(rel="preload" href="fonts/montserrat-600.woff2" as="font" crossorigin="anonymous")
 			link(rel="preload" href="fonts/montserrat-700.woff2" as="font" crossorigin="anonymous")
 			link(rel="preload" href="fonts/mulish-600.woff2" as="font" crossorigin="anonymous")
 			link(rel="preload" href="fonts/mulish-700.woff2" as="font" crossorigin="anonymous")
@@ -27,7 +26,7 @@ html(class="page" lang="ru")
 			include ../includes/header
 		main(class="main")
 			block content
-		block footer
-			include ../includes/footer
+		//- block footer
+		//- 	include ../includes/footer
 		block page-bottom
 			script(src="js/bundle.min.js")

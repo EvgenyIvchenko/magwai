@@ -1,1 +1,188 @@
-.header {}
+.header {
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding-top: 15px;
+	padding-bottom: 18px;
+
+	@include tablet {
+		min-height: 110px;
+	}
+
+	@include desktop {
+		min-height: 116px;
+	}
+}
+
+.header__container {
+	display: flex;
+	align-items: center;
+}
+
+.header__burger-menu {
+	position: relative;
+	display: grid;
+	align-items: center;
+	justify-content: flex-start;
+	margin-right: auto;
+	padding: 6px 3px;
+	width: 37px;
+	height: 31px;
+
+	span {
+		border-radius: 2px;
+		height: 3px;
+		background-color: var(--color-bg-alternate);
+	}
+
+	&[aria-expanded="false"] {
+		span {
+			position: absolute;
+			left: 3px;
+			transition: all .3s ease;
+
+			&:nth-child(1) {
+				top: 6px;
+				width: 15px;
+			}
+
+			&:nth-child(2) {
+				top: 14px;
+				width: 31px;
+			}
+
+			&:nth-child(3) {
+				top: 22px;
+				width: 22px;
+			}
+		}
+	}
+
+	&[aria-expanded="true"] {
+		/* stylelint-disable-next-line no-descending-specificity */
+		span {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transition: all .3s ease;
+
+			&:nth-child(1) {
+				top: 50%;
+				width: 31px;
+				transform: translate(-50%, -50%) rotate(45deg);
+			}
+
+			&:nth-child(2) {
+				display: none;
+			}
+
+			&:nth-child(3) {
+				top: 50%;
+				width: 31px;
+				transform: translate(-50%, -50%) rotate(-45deg);
+			}
+		}
+	}
+
+	@include tablet {
+		margin-right: 91px;
+	}
+
+	@include desktop {
+		display: none;
+	}
+}
+
+.header__logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: auto;
+	padding-right: 2px;
+
+	img {
+		width: 112px;
+		height: 38px;
+	}
+
+	@include tablet {
+		margin-right: auto;
+		margin-left: 0;
+
+		img {
+			width: 152px;
+			height: 60px;
+		}
+	}
+
+	@include desktop {
+		margin-right: 66px;
+		margin-left: 0;
+
+		img {
+			width: 156px;
+			height: 60px;
+		}
+	}
+}
+
+.header__navigation {}
+
+.header__call {
+	display: none;
+	justify-content: center;
+	border: 1px solid var(--color-stroke);
+	transform: skewX(-20deg);
+
+	svg {
+		fill: var(--color-bg-alternate);
+		transform: skewX(20deg);
+	}
+
+	@include tablet {
+		display: flex;
+		margin-right: 7px;
+		padding: 13px 18px;
+	}
+
+	@include desktop {
+		margin-right: 31px;
+	}
+}
+
+.header__popover-button {
+	display: none;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 150%;
+	transform: skewX(-20deg);
+	padding-block: 21px;
+
+	span {
+		display: block;
+		white-space: nowrap;
+		transform: skewX(20deg);
+	}
+
+	@include tablet {
+		display: block;
+		margin-right: 21px;
+		padding-inline: 31px;
+	}
+
+	@include desktop {
+		margin-right: 25px;
+		padding-inline: 71px;
+	}
+}
+
+.header__decor-panel {
+	display: none;
+	width: 6px;
+	height: 100%;
+	background-color: var(--color-bg-alternate);
+
+	@include tablet {
+		display: block;
+	}
+}
