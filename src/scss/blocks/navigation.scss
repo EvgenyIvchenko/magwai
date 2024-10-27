@@ -2,6 +2,7 @@
 	position: absolute;
 	top: 71px;
 	left: 0;
+	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
@@ -11,6 +12,7 @@
 	background-color: var(--color-bg-main);
 	opacity: 0;
 	transition: opacity .3s ease-in-out;
+	overflow: auto;
 	pointer-events: none;
 
 	&--opened {
@@ -22,27 +24,38 @@
 		top: 110px;
 		margin-bottom: 0;
 		height: calc(100dvh - 110px);
+		padding-bottom: 20px;
 	}
 
 	@include desktop {
 		position: static;
 		flex-direction: row;
+		padding-right: 20px;
 		height: auto;
 		opacity: 1;
 		pointer-events: visible;
+		padding-bottom: 0;
 	}
 }
 
 .navigation__list {
 	display: flex;
+	flex-grow: 1;
 	flex-direction: column;
+	flex-wrap: wrap;
 	width: 100%;
-	gap: 15px;
+	row-gap: 15px;
+	margin-bottom: 20px;
+
+	@include tablet {
+		margin-bottom: 0;
+	}
 
 	@include desktop {
+		column-gap: 14px;
 		flex-direction: row;
+		justify-content: flex-start;
 		width: auto;
-		gap: 22px;
 	}
 }
 
@@ -69,7 +82,7 @@
 
 	@include tablet {
 		font-size: 36px;
-		padding-inline: 40px;
+		padding-inline: 50px;
 	}
 
 	@include desktop {
@@ -79,7 +92,37 @@
 		-webkit-text-fill-color: initial;
 		-webkit-text-stroke: none;
 		color: var(--color-text-main);
-		padding-block: 5px;
-		padding-inline: 10px;
+		padding-block: 2px;
+		padding-inline: 5px;
+	}
+}
+
+.navigation__call {
+	display: grid;
+	place-items: center;
+	margin-bottom: 6px;
+	border: 1px solid var(--color-stroke);
+	width: calc(100% - 47px);
+	transform: skewX(-17deg); //- todo: наклон кнопок во всём макете различается, уточнить поведение у дизайнера
+	padding-block: 13px;
+
+	svg {
+		fill: var(--color-bg-alternate);
+		transform: skewX(17deg);
+	}
+
+	@include tablet {
+		display: none;
+	}
+}
+
+.navigation__popover-button {
+	margin-bottom: 21px;
+	width: calc(100% - 47px);
+	transform: skewX(-17deg);
+	padding-block: 21px;
+
+	@include tablet {
+		display: none;
 	}
 }

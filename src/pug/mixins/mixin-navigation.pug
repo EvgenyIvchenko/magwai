@@ -4,3 +4,7 @@ mixin navigation(data)
 			each link in data.navigation
 				li.navigation__item
 					a.navigation__link(href=link.href)!= link.text
+		a.navigation__call(href="#")
+			+icon(32, 32, 'phone')
+		button.navigation__popover-button.button.button--main(type="button")
+			span ОСТАВИТЬ ЗАЯВКУ

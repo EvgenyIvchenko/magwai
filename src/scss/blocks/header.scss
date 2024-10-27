@@ -1,16 +1,20 @@
 .header {
-	position: relative;
+	position: sticky;
+	top: 0;
+	z-index: 3;
 	display: flex;
 	align-items: center;
 	padding-top: 15px;
 	padding-bottom: 18px;
+	background-color: var(--color-bg-main);
 
 	@include tablet {
-		min-height: 110px;
+		padding: 30px 10px 20px;
 	}
 
 	@include desktop {
-		min-height: 116px;
+		padding-top: 28px;
+		padding-bottom: 28px;
 	}
 }
 
@@ -98,31 +102,29 @@
 	align-items: center;
 	justify-content: center;
 	margin-left: auto;
-	padding-right: 2px;
+	height: 38px;
+	min-width: 112px;
 
 	img {
-		width: 112px;
-		height: 38px;
+		width: 100%;
+		height: auto;
 	}
 
 	@include tablet {
 		margin-right: auto;
 		margin-left: 0;
+		height: 60px;
+		min-width: 156px;
 
 		img {
-			width: 152px;
-			height: 60px;
+			width: 100%;
+			height: auto;
 		}
 	}
 
 	@include desktop {
 		margin-right: 66px;
 		margin-left: 0;
-
-		img {
-			width: 156px;
-			height: 60px;
-		}
 	}
 }
 
@@ -130,19 +132,19 @@
 
 .header__call {
 	display: none;
-	justify-content: center;
-	border: 1px solid var(--color-stroke);
-	transform: skewX(-20deg);
 
 	svg {
 		fill: var(--color-bg-alternate);
-		transform: skewX(20deg);
+		transform: skewX(17deg);
 	}
 
 	@include tablet {
 		display: flex;
+		justify-content: center;
 		margin-right: 7px;
-		padding: 13px 18px;
+		border: 1px solid var(--color-stroke);
+		padding: 13px 20px;
+		transform: skewX(-17deg);
 	}
 
 	@include desktop {
@@ -150,28 +152,35 @@
 	}
 }
 
+.header__more-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 294px;
+
+	@include tablet {
+		margin-right: 10px;
+	}
+}
+
 .header__popover-button {
 	display: none;
-	font-weight: 700;
-	font-size: 12px;
-	line-height: 150%;
-	transform: skewX(-20deg);
-	padding-block: 21px;
 
 	span {
 		display: block;
 		white-space: nowrap;
-		transform: skewX(20deg);
+		transform: skewX(17deg);
 	}
 
 	@include tablet {
 		display: block;
-		margin-right: 21px;
+		margin-right: 6px;
+		transform: skewX(-17deg);
+		padding-block: 21px;
 		padding-inline: 31px;
 	}
 
 	@include desktop {
-		margin-right: 25px;
 		padding-inline: 71px;
 	}
 }
@@ -179,8 +188,9 @@
 .header__decor-panel {
 	display: none;
 	width: 6px;
-	height: 100%;
+	height: 60px;
 	background-color: var(--color-bg-alternate);
+	transform: skewX(-17deg);
 
 	@include tablet {
 		display: block;
