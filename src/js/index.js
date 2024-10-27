@@ -4,10 +4,10 @@ import { defocusButton } from './modules/defocus-button.js';
 import { initPhoneMask } from './modules/init-phone-mask.js';
 import { initPhoneHref } from './modules/init-phone-href.js';
 import { initBurgerMenu } from './modules/init-burger-menu.js';
-import { initCardLoader } from './modules/init-card-loader.js';
+// import { initCardLoader } from './modules/init-card-loader.js';
 
 defocusButton();
 initPhoneHref();
 initPhoneMask();
 initBurgerMenu();
-initCardLoader();
+// initCardLoader();
