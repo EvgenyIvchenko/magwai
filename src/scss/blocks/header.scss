@@ -100,31 +100,67 @@
 .header__logo {
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	margin-left: auto;
-	height: 38px;
-	min-width: 112px;
 
 	img {
 		width: 100%;
 		height: auto;
+		max-width: 112px;
+	}
+
+	&[href="#"] {
+		cursor: default;
 	}
 
 	@include tablet {
 		margin-right: auto;
 		margin-left: 0;
-		height: 60px;
-		min-width: 156px;
 
 		img {
-			width: 100%;
-			height: auto;
+			min-width: 156px;
+			max-width: none;
 		}
 	}
 
 	@include desktop {
-		margin-right: 66px;
-		margin-left: 0;
+		margin-right: 72px;
+	}
+}
+
+.header__navigation-wrap {
+	position: absolute;
+	top: 71px;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	height: calc(100dvh - 71px);
+	background-color: var(--color-bg-main);
+	opacity: 0;
+	transition: opacity .3s ease-in-out;
+	pointer-events: none;
+
+	&--opened {
+		opacity: 1;
+		pointer-events: visible;
+	}
+
+	@include tablet {
+		top: 110px;
+		margin-bottom: 0;
+		padding-bottom: 20px;
+		height: calc(100dvh - 110px);
+	}
+
+	@include desktop {
+		position: static;
+		flex-direction: row;
+		margin-right: 30px;
+		padding-bottom: 0;
+		height: auto;
+		opacity: 1;
+		pointer-events: visible;
 	}
 }
 
@@ -150,16 +186,13 @@
 	@include desktop {
 		margin-right: 31px;
 	}
-}
 
-.header__more-wrap {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	max-width: 294px;
+	@include hover {
+		opacity: .7;
+	}
 
-	@include tablet {
-		margin-right: 10px;
+	@include active {
+		opacity: .4;
 	}
 }
 
@@ -174,7 +207,8 @@
 
 	@include tablet {
 		display: block;
-		margin-right: 6px;
+		margin-right: 20px;
+		letter-spacing: .03em;
 		transform: skewX(-17deg);
 		padding-block: 21px;
 		padding-inline: 31px;
@@ -183,16 +217,16 @@
 	@include desktop {
 		padding-inline: 71px;
 	}
-}
 
-.header__decor-panel {
-	display: none;
-	width: 6px;
-	height: 60px;
-	background-color: var(--color-bg-alternate);
-	transform: skewX(-17deg);
+	@include hover {
+		span {
+			opacity: .7;
+		}
+	}
 
-	@include tablet {
-		display: block;
+	@include active {
+		span {
+			opacity: .4;
+		}
 	}
 }

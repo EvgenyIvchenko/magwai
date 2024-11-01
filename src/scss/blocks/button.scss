@@ -12,5 +12,43 @@
 		line-height: 150%;
 		text-align: center;
 		background-color: var(--color-button-main);
+
+		@include hover {
+			span {
+				opacity: .7;
+			}
+		}
+
+		@include active {
+			span {
+				opacity: .4;
+			}
+		}
+	}
+
+	&--decor {
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: -11px;
+			width: 6px;
+			height: 60px;
+			background-color: var(--color-bg-alternate);
+		}
+	}
+
+	&--decor-small {
+		&::after {
+			right: -8px;
+			width: 4px;
+			height: 46px;
+
+			@include tablet {
+				right: -11px;
+				width: 6px;
+				height: 60px;
+			}
+		}
 	}
 }

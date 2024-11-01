@@ -5,15 +5,18 @@ header.header
 			span
 			span
 		if isHomePage
-			div.header__logo
-				img(src="./img/content/logo-header.svg" width="112" height="38" alt="magwai logo")
+			a.header__logo(href="#")
+				img(src="./img/content/logo-header.svg" alt="magwai logo")
 		else
-			a.header__logo(href="#!")
-				img(src="./img/content/logo-header.svg" width="112" height="38" alt="magwai logo")
-		+navigation(headerData).header__navigation
+			a.header__logo(href="./index.html")
+				img(src="./img/content/logo-header.svg" alt="magwai logo")
+		.header__navigation-wrap
+			+navigation(headerData).header__navigation
+			a.navigation__call(href="#")
+				+icon(32, 32, 'phone')
+			button.navigation__popover-button.button.button--main(type="button")
+				span ОСТАВИТЬ ЗАЯВКУ
 		a.header__call(href="#")
 			+icon(32, 32, 'phone')
-		div.header__more-wrap
-			button.header__popover-button.button.button--main(type="button")
-				span ОСТАВИТЬ ЗАЯВКУ
-			div.header__decor-panel
+		button.header__popover-button.button.button--main.button--decor(type="button")
+			span ОСТАВИТЬ ЗАЯВКУ

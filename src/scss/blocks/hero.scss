@@ -5,9 +5,9 @@
 }
 
 .hero__bg-wrap {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
 	width: 100%;
 	height: 495px;
 	background-image:
@@ -30,7 +30,6 @@
 
 	@include desktop {
 		height: 960px;
-		// max-width: 1920px;
 		background-image:
 			image-set(
 		url("../img/static/planet-desktop@2x.webp") type("image/webp") 2x,
@@ -59,7 +58,7 @@
 	padding-bottom: 52px;
 
 	@include tablet {
-		padding-bottom: 76px;
+		padding-bottom: 68px;
 	}
 
 	@include desktop {
@@ -69,92 +68,85 @@
 
 .hero__content-wrap {
 	position: relative;
-	flex-direction: column;
-	display: flex;
-	align-items: flex-start;
 	z-index: 2;
-	max-width: 235px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	max-width: 265px;
 
 	@include tablet {
-		max-width: 427px;
 		padding-left: 10px;
+		max-width: 485px;
 	}
 
 	@include desktop {
-		max-width: 500px;
+		padding-left: 0;
+		max-width: none;
 	}
 }
 
 .hero__heading {
 	margin: 0;
+	margin-bottom: 20px;
 	font-weight: 700;
 	font-size: 20px;
+	letter-spacing: .06em;
 	text-transform: uppercase;
-	margin-bottom: 20px;
 	color: var(--color-text-main);
 
 	@include tablet {
-		font-size: 38px;
 		margin-bottom: 40px;
+		font-size: 38px;
+		line-height: 46px;
+		letter-spacing: .07em;
 	}
 
 	@include desktop {
+		max-width: 550px;
 		font-size: 42px;
+		line-height: 50px;
 	}
 }
 
 .hero__text {
+	margin-bottom: 19px;
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 150%;
-	margin-bottom: 20px;
-	opacity: 0.79;
+	letter-spacing: .06em;
+	opacity: .79;
 
 	@include tablet {
-		font-size: 16px;
 		margin-bottom: 40px;
-	}
-}
-
-.hero__more-wrap {
-	display: flex;
-}
-
-.hero__popover-button {
-	transform: skewX(-17deg);
-	margin-right: 5px;
-	margin-left: 6px;
-	padding-block: 14px;
-	padding-inline: 43px;
-
-
-	span {
-		transform: skewX(17deg);
-		display: block;
-		white-space: nowrap;
-	}
-
-	@include tablet {
-		padding-block: 21px;
-		padding-inline: 73px;
-		margin-right: 6px;
-		margin-left: 7px;
+		max-width: 450px;
+		font-size: 16px;
 	}
 
 	@include desktop {
-		padding-inline: 72px;
-		margin-left: 1px;
+		max-width: none;
 	}
 }
 
-.hero__decor-panel {
-	width: 5px;
-	height: 46px;
-	background-color: var(--color-bg-alternate);
+.hero__popover-button {
+	margin-left: 6px;
+	letter-spacing: .02em;
 	transform: skewX(-17deg);
+	padding-block: 14px;
+	padding-inline: 41px;
+
+	span {
+		display: block;
+		white-space: nowrap;
+		transform: skewX(17deg);
+	}
 
 	@include tablet {
-		width: 6px;
-		height: 60px;
+		margin-left: 7px;
+		padding-block: 21px;
+		padding-inline: 71px;
+	}
+
+	@include desktop {
+		margin-left: 10px;
 	}
 }

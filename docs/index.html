@@ -22,30 +22,28 @@
   <body class="page__body">
     <header class="header">
       <div class="header__container container">
-        <button class="header__burger-menu" type="button" aria-expanded="false" aria-label="Меню"><span></span><span></span><span></span></button>
-        <div class="header__logo"><img src="./img/content/logo-header.svg" width="112" height="38" alt="magwai logo"></div>
-            <nav class="navigation header__navigation">
-              <ul class="navigation__list">
-                <li class="navigation__item"><a class="navigation__link" href="#">УСЛУГИ</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#">АБОНЕМЕНТЫ</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#">ПОЧЕМУ МЫ</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#">ОБОРУДОВАНИЕ</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#">АКЦИИ</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#">FAQ</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#">КОНТАКТЫ</a></li>
-              </ul><a class="navigation__call" href="#">
-                    <svg width="32" height="32" aria-hidden="true">
-                      <use xlink:href="img/sprite.svg#phone"></use>
-                    </svg></a>
-              <button class="navigation__popover-button button button--main" type="button"><span>ОСТАВИТЬ ЗАЯВКУ</span></button>
-            </nav><a class="header__call" href="#">
+        <button class="header__burger-menu" type="button" aria-expanded="false" aria-label="Меню"><span></span><span></span><span></span></button><a class="header__logo" href="#"><img src="./img/content/logo-header.svg" alt="magwai logo"></a>
+        <div class="header__navigation-wrap">
+              <nav class="navigation header__navigation">
+                <ul class="navigation__list">
+                  <li class="navigation__item"><a class="navigation__link" href="#">УСЛУГИ</a></li>
+                  <li class="navigation__item"><a class="navigation__link" href="#">АБОНЕМЕНТЫ</a></li>
+                  <li class="navigation__item"><a class="navigation__link" href="#">ПОЧЕМУ МЫ</a></li>
+                  <li class="navigation__item"><a class="navigation__link" href="#">ОБОРУДОВАНИЕ</a></li>
+                  <li class="navigation__item"><a class="navigation__link" href="#">АКЦИИ</a></li>
+                  <li class="navigation__item"><a class="navigation__link" href="#">FAQ</a></li>
+                  <li class="navigation__item"><a class="navigation__link" href="#">КОНТАКТЫ</a></li>
+                </ul>
+              </nav><a class="navigation__call" href="#">
+                <svg width="32" height="32" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#phone"></use>
+                </svg></a>
+          <button class="navigation__popover-button button button--main" type="button"><span>ОСТАВИТЬ ЗАЯВКУ</span></button>
+        </div><a class="header__call" href="#">
               <svg width="32" height="32" aria-hidden="true">
                 <use xlink:href="img/sprite.svg#phone"></use>
               </svg></a>
-        <div class="header__more-wrap">
-          <button class="header__popover-button button button--main" type="button"><span>ОСТАВИТЬ ЗАЯВКУ</span></button>
-          <div class="header__decor-panel"></div>
-        </div>
+        <button class="header__popover-button button button--main button--decor" type="button"><span>ОСТАВИТЬ ЗАЯВКУ</span></button>
       </div>
     </header>
     <main class="main">
@@ -56,27 +54,24 @@
             <div class="hero__content-wrap">
               <h1 class="hero__heading">Полет Илона Маска и DOGIE COIN</h1>
               <p class="hero__text">В прошлый четверг все офигели от полета DOGIE COIN на марс.</p>
-              <div class="hero__more-wrap">
-                <button class="hero__popover-button button button--main" type="button"><span>ОСТАВИТЬ ЗАЯВКУ</span></button>
-                <div class="hero__decor-panel"></div>
-              </div>
+              <button class="hero__popover-button button button--main button--decor button--decor-small" type="button"><span>ОСТАВИТЬ ЗАЯВКУ</span></button>
             </div>
           </div>
         </div>
       </section>
       <section class="product">
         <div class="product__container container">
-          <h1 class="product__heading">Карточки</h1>
+          <h2 class="product__heading">Карточки</h2>
           <ul class="product__card-list card-list">
             <li class="card-list__item">
               <div class="card-list__pic-wrap">
                 <picture>
-                  <source srcset="img/content/coin01@1x.webp, img/content/coin01@2x.webp, img/content/coin01@3x.webp" type="image/webp"><img src="img/content/coin01@1x.png" srcset="img/content/coin01@2x.png, img/content/coin01@3x.png" width="320" height="185" alt="Монеты">
+                  <source srcset="img/content/coin01@1x.webp, img/content/coin01@2x.webp" type="image/webp"><img src="img/content/coin01@1x.png" srcset="img/content/coin01@2x.png" alt="Монеты">
                 </picture>
               </div>
               <div class="card-list__content-wrap">
                 <p class="card-list__type">Bridge</p>
-                <h2 class="card-list__heading">How to increase your productivity with a Music</h2>
+                <h3 class="card-list__heading">How to increase your <br> productivity with a Music</h3>
                 <p class="card-list__text-content">
                   Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium,
                   totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
@@ -87,12 +82,12 @@
             <li class="card-list__item">
               <div class="card-list__pic-wrap">
                 <picture>
-                  <source srcset="img/content/coin02@1x.webp, img/content/coin02@2x.webp" type="image/webp"><img src="img/content/coin02@1x.png" srcset="img/content/coin02@2x.png" width="320" height="185" alt="Монеты">
+                  <source srcset="img/content/coin02@1x.webp, img/content/coin02@2x.webp" type="image/webp"><img src="img/content/coin02@1x.png" srcset="img/content/coin02@2x.png" alt="Монеты">
                 </picture>
               </div>
               <div class="card-list__content-wrap">
                 <p class="card-list__type">Water</p>
-                <h2 class="card-list__heading">How to increase your productivity with a Music</h2>
+                <h3 class="card-list__heading">How to increase your <br> productivity with a Music</h3>
                 <p class="card-list__text-content">
                   Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium,
                   totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
@@ -103,12 +98,12 @@
             <li class="card-list__item">
               <div class="card-list__pic-wrap">
                 <picture>
-                  <source srcset="img/content/coin03@1x.webp, img/content/coin03@2x.webp" type="image/webp"><img src="img/content/coin03@1x.png" srcset="img/content/coin03@2x.png" width="320" height="185" alt="Монеты">
+                  <source srcset="img/content/coin03@1x.webp, img/content/coin03@2x.webp" type="image/webp"><img src="img/content/coin03@1x.png" srcset="img/content/coin03@2x.png" alt="Монеты">
                 </picture>
               </div>
               <div class="card-list__content-wrap">
                 <p class="card-list__type">Bridge</p>
-                <h2 class="card-list__heading">How to increase your productivity with a Music</h2>
+                <h3 class="card-list__heading">How to increase your <br> productivity with a Music</h3>
                 <p class="card-list__text-content">
                   Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium,
                   totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
@@ -119,12 +114,12 @@
             <li class="card-list__item">
               <div class="card-list__pic-wrap">
                 <picture>
-                  <source srcset="img/content/coin04@1x.webp, img/content/coin04@2x.webp" type="image/webp"><img src="img/content/coin04@1x.png" srcset="img/content/coin04@2x.png" width="320" height="185" alt="Монеты">
+                  <source srcset="img/content/coin04@1x.webp, img/content/coin04@2x.webp" type="image/webp"><img src="img/content/coin04@1x.png" srcset="img/content/coin04@2x.png" alt="Монеты">
                 </picture>
               </div>
               <div class="card-list__content-wrap">
                 <p class="card-list__type">Bridge</p>
-                <h2 class="card-list__heading">How to increase your productivity with a Music</h2>
+                <h3 class="card-list__heading">How to increase your <br> productivity with a Music</h3>
                 <p class="card-list__text-content">
                   Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium,
                   totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
@@ -135,12 +130,12 @@
             <li class="card-list__item">
               <div class="card-list__pic-wrap">
                 <picture>
-                  <source srcset="img/content/coin05@1x.webp, img/content/coin05@2x.webp" type="image/webp"><img src="img/content/coin05@1x.png" srcset="img/content/coin05@2x.png" width="320" height="185" alt="Монеты">
+                  <source srcset="img/content/coin05@1x.webp, img/content/coin05@2x.webp" type="image/webp"><img src="img/content/coin05@1x.png" srcset="img/content/coin05@2x.png" alt="Монеты">
                 </picture>
               </div>
               <div class="card-list__content-wrap">
                 <p class="card-list__type">Bridge</p>
-                <h2 class="card-list__heading">How to increase your productivity with a Music</h2>
+                <h3 class="card-list__heading">How to increase your <br> productivity with a Music</h3>
                 <p class="card-list__text-content">
                   Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium,
                   totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
@@ -151,12 +146,12 @@
             <li class="card-list__item">
               <div class="card-list__pic-wrap">
                 <picture>
-                  <source srcset="img/content/coin06@1x.webp, img/content/coin06@2x.webp" type="image/webp"><img src="img/content/coin06@1x.png" srcset="img/content/coin06@2x.png" width="320" height="185" alt="Монеты">
+                  <source srcset="img/content/coin06@1x.webp, img/content/coin06@2x.webp" type="image/webp"><img src="img/content/coin06@1x.png" srcset="img/content/coin06@2x.png" alt="Монеты">
                 </picture>
               </div>
               <div class="card-list__content-wrap">
                 <p class="card-list__type">Forest</p>
-                <h2 class="card-list__heading">How to increase your productivity with a Music</h2>
+                <h3 class="card-list__heading">How to increase your <br> productivity with a Music</h3>
                 <p class="card-list__text-content">
                   Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium,
                   totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
@@ -167,12 +162,12 @@
             <li class="card-list__item">
               <div class="card-list__pic-wrap">
                 <picture>
-                  <source srcset="img/content/coin07@1x.webp, img/content/coin07@2x.webp" type="image/webp"><img src="img/content/coin07@1x.png" srcset="img/content/coin07@2x.png" width="320" height="185" alt="Монеты">
+                  <source srcset="img/content/coin07@1x.webp, img/content/coin07@2x.webp" type="image/webp"><img src="img/content/coin07@1x.png" srcset="img/content/coin07@2x.png" alt="Монеты">
                 </picture>
               </div>
               <div class="card-list__content-wrap">
                 <p class="card-list__type card-list__type--none">Bridge</p>
-                <h2 class="card-list__heading">How to increase your productivity with a Music</h2>
+                <h3 class="card-list__heading">How to increase your <br> productivity with a Music</h3>
                 <p class="card-list__text-content">
                   Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium,
                   totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
@@ -183,12 +178,12 @@
             <li class="card-list__item">
               <div class="card-list__pic-wrap">
                 <picture>
-                  <source srcset="img/content/coin08@1x.webp, img/content/coin08@2x.webp" type="image/webp"><img src="img/content/coin08@1x.png" srcset="img/content/coin08@2x.png" width="320" height="185" alt="Монеты">
+                  <source srcset="img/content/coin08@1x.webp, img/content/coin08@2x.webp" type="image/webp"><img src="img/content/coin08@1x.png" srcset="img/content/coin08@2x.png" alt="Монеты">
                 </picture>
               </div>
               <div class="card-list__content-wrap">
                 <p class="card-list__type">Nature</p>
-                <h2 class="card-list__heading">How to increase your productivity with a Music</h2>
+                <h3 class="card-list__heading">How to increase your <br> productivity with a Music</h3>
                 <p class="card-list__text-content">
                   Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium,
                   totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
@@ -199,12 +194,12 @@
             <li class="card-list__item">
               <div class="card-list__pic-wrap">
                 <picture>
-                  <source srcset="img/content/coin09@1x.webp, img/content/coin09@2x.webp" type="image/webp"><img src="img/content/coin09@1x.png" srcset="img/content/coin09@2x.png" width="320" height="185" alt="Монеты">
+                  <source srcset="img/content/coin09@1x.webp, img/content/coin09@2x.webp" type="image/webp"><img src="img/content/coin09@1x.png" srcset="img/content/coin09@2x.png" alt="Монеты">
                 </picture>
               </div>
               <div class="card-list__content-wrap">
                 <p class="card-list__type">Nature</p>
-                <h2 class="card-list__heading">How to increase your productivity with a Music</h2>
+                <h3 class="card-list__heading">How to increase your <br> productivity with a Music</h3>
                 <p class="card-list__text-content">
                   Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium,
                   totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
@@ -215,12 +210,12 @@
             <li class="card-list__item">
               <div class="card-list__pic-wrap">
                 <picture>
-                  <source srcset="img/content/coin10@1x.webp, img/content/coin10@2x.webp" type="image/webp"><img src="img/content/coin10@1x.png" srcset="img/content/coin10@2x.png" width="320" height="185" alt="Монеты">
+                  <source srcset="img/content/coin10@1x.webp, img/content/coin10@2x.webp" type="image/webp"><img src="img/content/coin10@1x.png" srcset="img/content/coin10@2x.png" alt="Монеты">
                 </picture>
               </div>
               <div class="card-list__content-wrap">
                 <p class="card-list__type">Nature</p>
-                <h2 class="card-list__heading">How to increase your productivity with a Music</h2>
+                <h3 class="card-list__heading">How to increase your <br> productivity with a Music</h3>
                 <p class="card-list__text-contentp card-list__text-content">
                   Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium,
                   totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
@@ -229,30 +224,27 @@
               </div>
             </li>
           </ul>
-          <div class="product__more-wrap">
-            <button class="product__show-more button button--main" type="button"><span>Загрузить еще</span></button>
-            <div class="product__decor-panel"></div>
-          </div>
-          <template id="card">
-            <li class="card-list__item card">
-              <div class="card-list__pic-wrap">
-                <picture>
-                  <source srcset="img/content/coin01@1x.webp, img/content/coin01@2x.webp" type="image/webp"><img src="img/content/coin01@1x.png" srcset="img/content/coin01@2x.png" width="320" height="185" alt="Монеты">
-                </picture>
-              </div>
-              <div class="card-list__content-wrap">
-                <p class="card-list__type">Bridge</p>
-                <h2 class="card-list__heading">How to increase your productivity with a Music</h2>
-                <p class="card-list__text-content">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium,
-                  totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
-                </p>
-                <p class="card-list__author">Posted by <span>Eugenia</span>, on July  24, 2019</p><a class="card-list__continue" href="#">Continue reading</a>
-              </div>
-            </li>
-          </template>
+          <button class="product__show-more button button--main button--decor" type="button"><span>Загрузить еще</span></button>
         </div>
       </section>
+      <template id="card">
+        <li class="card-list__item">
+          <div class="card-list__pic-wrap">
+            <picture>
+              <source srcset="img/content/coin01@1x.webp, img/content/coin01@2x.webp" type="image/webp"><img src="img/content/coin01@1x.png" srcset="img/content/coin01@2x.png" alt="Монеты">
+            </picture>
+          </div>
+          <div class="card-list__content-wrap">
+            <p class="card-list__type">Bridge</p>
+            <h3 class="card-list__heading">How to increase your productivity with a Music</h3>
+            <p class="card-list__text-content">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium,
+              totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
+            </p>
+            <p class="card-list__author">Posted by <span>Eugenia</span>, on July  24, 2019</p><a class="card-list__continue" href="#">Continue reading</a>
+          </div>
+        </li>
+      </template>
     </main>
     <script src="js/bundle.min.js"></script>
   </body>

@@ -1,33 +1,62 @@
-// import { getData } from './api';
-// import { renderCard } from './card';
+const showMoreElement = document.querySelector('.product__show-more');
+const cardListElement = document.querySelector('.card-list');
+const cardTemplate = document.querySelector('#card').content;
 
-// const cardListElement = document.querySelector('.card-list');
+const CARDS_PER_CLICK = 5;
+const MAX_COUNT = 30;
+let MIN_RANGE = 0;
+let MAX_RANGE = CARDS_PER_CLICK;
 
-// const showError = () => {
-// 	console.log('not-ok');
-// };
+const limitChecker = () => {
+	if (cardListElement.childElementCount >= MAX_COUNT) {
+		showMoreElement.style.display = 'none';
+	}
+};
 
-// const renderCards = (cards, renderCard) => {
-// 	cards.slice(0, 5).forEach((card) => {
-// 		cardListElement.append(renderCard(card));
-// 	});
-// };
+const renderCard = (item) => {
+	const cardElement = cardTemplate.cloneNode(true);
 
-// const onShowMoreClick = (getData, renderCard, showError) => {
-// 	getData(
-// 		'https://jsonplaceholder.typicode.com/posts',
-// 		(data) => {
-// 			renderCards(data, renderCard);
-// 		},
-// 		showError
-// 	),
-// };
+	cardElement.querySelector('.card-list__heading').textContent = item.title;
+	cardElement.querySelector('.card-list__text-content').textContent = item.body;
 
-// const ggg = (e) => {
-// 	e.preventDefault();
-// 	onShowMoreClick(getData, renderCard, showError);
-// };
+	return cardElement;
+};
 
-// export const initCardLoader = () => {
-// 	cardListElement.addEventListener('click', ggg);
-// };
+const showMoreCards = () => {
+	fetch(
+		'https://jsonplaceholder.typicode.com/posts',
+		{
+			method: 'GET',
+			credentials: 'same-origin',
+		},
+	)
+		.then((response) => {
+			if (response.ok) {
+				return response.json();
+			}
+
+			throw new Error(`${response.status} ${response.statusText}`);
+		})
+		.then((data) => {
+			renderCards(data);
+		})
+		.catch((err) => {
+			console.log(err);
+		});
+};
+
+function renderCards(cards) {
+	cards.slice(MIN_RANGE, MAX_RANGE).forEach((card) => {
+		if (cardListElement.childElementCount < MAX_COUNT) {
+			cardListElement.append(renderCard(card));
+
+			MIN_RANGE++;
+			MAX_RANGE++;
+
+			limitChecker();
+		}
+	});
+
+}
+
+export const initCardLoader = () => showMoreElement.addEventListener('click', showMoreCards);
