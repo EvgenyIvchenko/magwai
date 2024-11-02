@@ -23,6 +23,7 @@
 	display: grid;
 	flex: 1 1 320px;
 	align-items: stretch;
+	grid-template-rows: auto 1fr;
 
 	@include tablet {
 		max-width: 489px;

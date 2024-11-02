@@ -1020,6 +1020,7 @@ input[type=radio].visually-hidden {
   display: grid;
   flex: 1 1 320px;
   align-items: stretch;
+  grid-template-rows: auto 1fr;
 }
 @media (min-width: 768px) {
   .card-list__item {
