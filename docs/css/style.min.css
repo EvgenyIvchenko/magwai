@@ -1039,7 +1039,7 @@ input[type=radio].visually-hidden {
 
 .card-list__content-wrap {
   display: grid;
-  align-items: center;
+  align-items: start;
   justify-content: flex-start;
   padding: 25px 25px 30px;
   height: 100%;
@@ -1078,6 +1078,7 @@ input[type=radio].visually-hidden {
 }
 
 .card-list__author {
+  align-self: end;
   margin-bottom: 25px;
   font-weight: 400;
   font-size: 12px;
@@ -1090,6 +1091,7 @@ input[type=radio].visually-hidden {
 }
 
 .card-list__continue {
+  align-self: end;
   width: 100%;
   font-family: var(--second-family);
   font-weight: 600;
