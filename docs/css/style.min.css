@@ -1083,6 +1083,7 @@ input[type=radio].visually-hidden {
   font-weight: 400;
   font-size: 14px;
   line-height: 171%;
+  letter-spacing: 0.07em;
   text-overflow: ellipsis;
   color: var(--color-text-alternate);
   -webkit-box-orient: vertical;
