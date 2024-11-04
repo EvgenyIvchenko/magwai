@@ -1060,21 +1060,33 @@ input[type=radio].visually-hidden {
 }
 
 .card-list__heading {
+  display: -webkit-box;
+  overflow: hidden;
   margin: 0;
   margin-bottom: 20px;
+  min-height: 52px;
   font-weight: 400;
   font-size: 16px;
   line-height: 162%;
   letter-spacing: 0.07em;
+  text-overflow: ellipsis;
   color: var(--color-text-heading);
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .card-list__text-content {
+  display: -webkit-box;
+  overflow: hidden;
   margin-bottom: 20px;
+  min-height: 144px;
   font-weight: 400;
   font-size: 14px;
   line-height: 171%;
+  text-overflow: ellipsis;
   color: var(--color-text-alternate);
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
 }
 
 .card-list__author {
@@ -1096,6 +1108,7 @@ input[type=radio].visually-hidden {
   font-family: var(--second-family);
   font-weight: 600;
   font-size: 14px;
+  line-height: 18px;
   text-align: center;
   background-color: var(--color-text-heading);
   padding-block: 16px;
